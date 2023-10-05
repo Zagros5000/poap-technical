@@ -21,8 +21,7 @@ export const SearchBar = () => {
 	useEffect(() => {
 		setLoading(loading);
 	}, [setLoading, loading]);
-
-	// update context with scan results
+	// make the api request once we have an address
 	useEffect(() => {
 		makeRequest("get", `${API_USER_SEARCH_URL}/${address}`);
 	}, [address, makeRequest]);
